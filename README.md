@@ -60,3 +60,26 @@ end
 </code></pre>
 
 ![frame30(1)](https://github.com/chzhao127/Project-SLAM/assets/161893598/6fb976f3-2fed-4629-b49e-0d8b1aed5db6)
+Then I get 30 Pictures of this video.I will continue to use the Matlab
+
+<pre><code>
+imageFolder = 'D:\CalibrationImages';
+imds = imageDatastore(imageFolder);
+
+
+squareSize = 29; 
+boardSize = [7, 10];
+calibrationConfig = cameraCalibrator('BoardSize', boardSize, 'SquareSize', squareSize, 'WorldUnits', 'mm');
+
+addImages(calibrationConfig, imds.Files, 'DetectionMode', 'automatic');
+
+[calibrationSession, calibrationErrors] = calibrate(calibrationConfig);
+
+showReprojectionErrors(calibrationSession);
+showExtrinsics(calibrationSession);
+
+cameraParams = calibrationSession.CameraParameters;
+save('cameraParams.mat', 'cameraParams');
+
+disp('Calibration completed and saved.');
+</code></pre>
