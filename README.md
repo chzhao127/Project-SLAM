@@ -11,5 +11,6 @@ it adjusts the map and camera trajectory to ensure consistency across the entire
 5. Once a loop is closed, a global optimization process refines the entire map and trajectory to reduce long-term drift and improve overall accuracy.
 
 ## &bull; Step 1 of Results
-![Figure1](https://github.com/chzhao127/Project-SLAM/assets/161893598/3f46520b-fccc-49f7-a22d-b82828c593fb)
+![Figure1(1)](https://github.com/chzhao127/Project-SLAM/assets/161893598/34409bb3-5e88-4c82-970c-5eea0ed06723)
+
 
