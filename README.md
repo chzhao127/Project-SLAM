@@ -1,5 +1,5 @@
-# DHT-11 Visual SLAM
-## &bull; Step 1
+#  Visual SLAM
+## &bull; Step 1 of summary
 1. The system begins by creating a map using two key frames from video data. It uses ORB  features to find correspondences between these frames.
 The relative positions and orientations of the camera are estimated from these correspondences using triangulation.
 2.As new frames are processed, the system estimates the camera's movement by matching new ORB features to the existing map. 
@@ -10,4 +10,4 @@ and a bundle adjustment is performed to optimize the map's accuracy by minimizin
 it adjusts the map and camera trajectory to ensure consistency across the entire map.
 5. Once a loop is closed, a global optimization process refines the entire map and trajectory to reduce long-term drift and improve overall accuracy.
 
-##Results
+## &bull; Step 1 ofResults
