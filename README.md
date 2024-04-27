@@ -38,6 +38,7 @@ Next, I used these images to do visual SLAM. This process needs to know certain 
 
 In the end, I used the visual-SLAM technique to rebuild the scene and guess the camera's path. I compared these results with any real ground truth data I had. If I had ground truth data, it would help check how correct the SLAM predictions were.
 ## &bull; code
+<pre><code>
 outputFolder = 'D:\CalibrationImages';
 if ~exist(outputFolder, 'dir')
     mkdir(outputFolder); 
@@ -56,3 +57,4 @@ while hasFrame(v)
         disp(['Saved ', outputFilename]);
     end
 end
+</code></pre>
