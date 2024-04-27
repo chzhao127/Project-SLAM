@@ -28,3 +28,31 @@ Lastly, I would put all these parts together in a system, probably using softwar
 By following these steps and improving based on testing, I hope to make a visual-SLAM system that works well and is reliable, based on the project example.
 
 ## Step 2
+For step two of the project, I chose to use a video of a specific area to make my dataset. This area could be a classroom, bedroom, or any other place. I recorded a video there and also took a separate photo with me in it. This photo shows that I really collected the data from this place myself.
+
+Then, I used MATLAB to work on the video. The goal was to change the video into many single images, or frames. These frames are pictures taken at different times during the video. This is important because the visual-SLAM system uses these images to rebuild the environment and figure out where the camera has moved.
+
+To do this, I used the VideoReader function in MATLAB to open and go through the video. I saved each frame as a separate image file by using a loop that went through the video frame by frame.
+
+Next, I used these images to do visual SLAM. This process needs to know certain camera details like focal length and optical center. These details are very important for making a correct 3D model and for predicting where the camera moves. MATLAB has some tools and example codes that help find out these camera details.
+
+In the end, I used the visual-SLAM technique to rebuild the scene and guess the camera's path. I compared these results with any real ground truth data I had. If I had ground truth data, it would help check how correct the SLAM predictions were.
+## &bull; code
+outputFolder = 'D:\CalibrationImages';
+if ~exist(outputFolder, 'dir')
+    mkdir(outputFolder); 
+end
+v = VideoReader('D:\Videos\MyVideos.mp4');
+frameInterval = 30; 
+frameIdx = 0;       
+
+while hasFrame(v)
+    frame = readFrame(v);
+    frameIdx = frameIdx + 1;
+    
+    if mod(frameIdx, frameInterval) == 0
+        outputFilename = sprintf('%s\\frame%d.jpg', outputFolder, frameIdx);
+        imwrite(frame, outputFilename);  
+        disp(['Saved ', outputFilename]);
+    end
+end
