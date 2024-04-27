@@ -26,3 +26,5 @@ When there are enough changes in the scene, or after a certain number of picture
 Another important part is loop closure, which helps correct errors in the map. This happens when the camera sees a part of the scene it has seen before. To do this, I would need a way to recognize these places, probably by keeping a database of features.
 Lastly, I would put all these parts together in a system, probably using software that can handle real-time data, like MATLAB or Python with OpenCV. It would also be important to test the system in different places to make sure it works well and make adjustments based on what I find.
 By following these steps and improving based on testing, I hope to make a visual-SLAM system that works well and is reliable, based on the project example.
+
+## Step 2
