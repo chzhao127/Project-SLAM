@@ -10,4 +10,6 @@ and a bundle adjustment is performed to optimize the map's accuracy by minimizin
 it adjusts the map and camera trajectory to ensure consistency across the entire map.
 5. Once a loop is closed, a global optimization process refines the entire map and trajectory to reduce long-term drift and improve overall accuracy.
 
-## &bull; Step 1 ofResults
+## &bull; Step 1 of Results
+![Figure1](https://github.com/chzhao127/Project-SLAM/assets/161893598/3f46520b-fccc-49f7-a22d-b82828c593fb)
+
