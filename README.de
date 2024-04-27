@@ -1,4 +1,4 @@
-## Visual SLAM
+# Visual SLAM
 1. The system begins by creating a map using two key frames from video data. It uses ORB  features to find correspondences between these frames.
 The relative positions and orientations of the camera are estimated from these correspondences using triangulation.
 2.As new frames are processed, the system estimates the camera's movement by matching new ORB features to the existing map. 
