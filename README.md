@@ -13,4 +13,5 @@ it adjusts the map and camera trajectory to ensure consistency across the entire
 ## &bull; Step 1 of Results
 ![Figure1(1)](https://github.com/chzhao127/Project-SLAM/assets/161893598/34409bb3-5e88-4c82-970c-5eea0ed06723)
 
+![Figure2(1)](https://github.com/chzhao127/Project-SLAM/assets/161893598/e213c0a4-cc66-49ac-a0ac-2398a1fd28ef)
 
